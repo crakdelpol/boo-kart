@@ -1,0 +1,32 @@
+#header-wrapper {
+    width: 100%;
+    height: 100px;
+}
+
+.logo {
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 35px;
+    font-family: fantasy;
+}
+
+.tagline {
+    font-size: 10px;
+    margin-top: 50px;
+    margin-left: -123px;
+    font-family: monospace;
+}
+
+.nav-wrapper {
+    margin-left: 100px;
+    margin-top: 15px;
+}
+
+.ulBooks {
+    list-style-type: none;
+    
+}
+.book{
+    margin: 5px;
+    border: 1px solid black;
+}
