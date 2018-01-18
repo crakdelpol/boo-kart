@@ -1,5 +1,7 @@
 var myApp = angular.module("myApp", ["ngRoute"])
-
+/**
+ * define a configuration for route
+ */
 myApp.config(function($routeProvider){
     $routeProvider
         .when('/books', {
@@ -15,6 +17,9 @@ myApp.config(function($routeProvider){
         })
 });
 
+/**
+ * define a factory to mock http result
+ */
 myApp.factory("bookService", function(){
     var books = 
     [
@@ -69,6 +74,9 @@ myApp.factory("bookService", function(){
     }
 });
 
+/**
+ * create service for simulate http calls
+ */
 myApp.factory("kartService", function(){
     var kart = [];
 
@@ -85,7 +93,9 @@ myApp.factory("kartService", function(){
 
     }
 });
-
+/**
+ * created controller user by kart-list.html
+ */
 myApp.controller("KartListCtrl", function($scope, kartService){
     $scope.kart = kartService.getKart();
 
@@ -93,14 +103,18 @@ myApp.controller("KartListCtrl", function($scope, kartService){
         kartService.buy(book);
     }
 });
-
+/**
+ * create controller user by static header of site
+ */
 myApp.controller("HeaderCtrl", function($scope) {
     $scope.appDetails = {
         title: "BooKart",
         tagline: "We Have 1 million books for you"
     };
 })
-
+/**
+ * create controller used by book-list
+ */
 myApp.controller("BookListCtrl", function($scope, bookService, kartService){
 
     $scope.books = bookService.getBooks();
