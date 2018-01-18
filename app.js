@@ -15,7 +15,7 @@ myApp.config(function($routeProvider){
         })
 });
 
-myApp.factory("bookService", function(){
+myApp.factory("bookService", function($scope){
     $scope.books = 
     [
         {
